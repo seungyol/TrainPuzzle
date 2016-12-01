@@ -19,7 +19,7 @@ import TrainRoute from 'src/train-route';
 
         for(let i =0; i<routes.length; i++) {
             routes[i] = routes[i].trim();
-            if(routes[i].length === 3){
+            if(routes[i].match(/^[A-Z]{1}[A-Z]{1}[0-9]{1}$/)){
                 let tmp = routes[i].split("");
                 if(isNaN(tmp[2])){
                     models = [];
