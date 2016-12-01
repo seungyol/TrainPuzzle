@@ -1,0 +1,95 @@
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Technical Test for Genie Solutions">
+        <meta name="author" content="Scott Lee">
+        <script type='text/javascript' src='../node_modules/systemjs/dist/system.js'></script>
+        <script>
+          // set our baseURL reference path
+            System.config({
+              defaultJSExtensions: true,
+              transpiler: "traceur",
+              paths: {
+                "js/*": "src/*.js",
+                "npm:*": "../node_modules/*",
+                "jasmine": "../node_modules/jasmine-core/lib/jasmine-core/jasmine.js",
+                "jasmine-boot": "../node_modules/jasmine-core/lib/jasmine-core/boot.js"
+              },
+
+              map: {
+                "traceur": "npm:/traceur/bin/traceur",
+                "traceur-runtime": "npm:/traceur-runtime/index"
+              }
+            });
+
+            // loads /js/main.js
+            SystemJS.import('src/main')
+                .catch( console.error.bind(console) );            
+        </script>          
+        <link rel='stylesheet' href='css/main.css' type='text/css' >
+    </head>
+    
+    <body >
+        <header>
+            <h1>Train Route Information</h1>
+        </header>
+        <section>
+            <h2>Data File</h2>
+            <input type='file' id='dataFile' />
+            
+            <div class='data-box'>
+                <h3>Data Contents</h3>
+                <div id='content'></div>
+            </div>
+        </section>
+        <section>
+            <div class='btn-box'>
+                <button type='button' id='btnRun' disabled>RUN TESTS</button>
+            </div>
+            <div class='test' id='test1'>
+                <h1>Test 1: The distance of the route A-B-C</h2>
+                <h2 class='result' ></h2>
+            </div>
+            <div class='test' id='test2'>
+                <h1>Test 2: The distance of the route A-D</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test3'>
+                <h1>Test 3: The distance of the route A-D-C.</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test4'>
+                <h1>Test 4: The distance of the route A-E-B-C-D.</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test5'>
+                <h1>Test 5: The distance of the route A-E-D</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test6'>
+                <h1>Test 6: The number of trips starting at C and ending at C with a maximum of 3 stops</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test7'>
+                <h1>Test 7: The number of trips starting at A and ending at C with exactly 4 stops</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test8'>
+                <h1>Test 8: The length of the shortest route (in terms of distance to travel) from A to C</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test9'>
+                <h1>Test 9: The length of the shortest route (in terms of distance to travel) from B to B</h2>
+                <h2 class='result'></h2>
+            </div>
+            <div class='test' id='test10'>
+                <h1>Test 10: The number of different routes from C to C with a distance of less than 30</h2>
+                <h2 class='result'></h2>
+            </div>
+        
+        </section>
+        <div id='successMsg'>Tests are completed successfully!</div>
+      
+    </body>
+</html>

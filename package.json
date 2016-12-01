@@ -1,0 +1,21 @@
+{
+  "name": "geniesolutions",
+  "version": "1.0.0",
+  "description": "Tech Test for Genie Solutions",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "live-server": "^1.1.0"
+  },
+  "dependencies": {
+    "systemjs": "^0.19.41",
+    "traceur": "0.0.111",
+    "traceur-runtime": "0.0.59"
+  }
+}

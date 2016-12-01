@@ -1,0 +1,50 @@
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+}
+
+header h1 {text-align: center;}
+header, section {
+    margin: 2% 5%;
+}
+.data-box {
+    height: 60px;
+}
+.btn-box button {
+    height: 30px;
+    font-size: 20px;
+}
+.test {
+    display: flex;
+}
+.test * {
+    font-size: 16px;
+}
+.test h1 {
+    width: 80%;
+}
+.test .result {
+    color: red;
+    width: 20%;
+}
+
+#successMsg {
+    position: absolute;
+    background-color: yellow;
+    font-size: 34px;
+    left: -999px;
+    width: 0;
+    height: 0px;
+    transition: left 1s, width 0.1s, height 0.1s;
+/*    border: 1px solid blue;*/
+    text-align: center;
+    top: 25%;
+}
+
+#successMsg.active {
+    left: 30%;    
+    width: 50%;
+    height: 50px;
+}
