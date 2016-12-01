@@ -7,7 +7,7 @@ This system contains the solution of Genie solutions's puzzle.
 #### "How to setup this app"
 
 
-1. Clone the repository "git clone https://github.com/seungyol/puzzle.github.io.git"
+1. Clone the repository "git clone https://github.com/seungyol/TrainPuzzle.git"
 
 2. Install npm dependencies "npm install"
 
